@@ -10,7 +10,7 @@ repositories {
 	mavenCentral()
 }
 
-dependencies {
+dependencies { 
     // LOGGING
     compile 'org.slf4j:slf4j-api:1.7.21'
     compile group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.22'
