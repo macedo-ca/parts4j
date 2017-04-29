@@ -18,6 +18,7 @@ Part<YourClassNameHere> PART=PART_TYPE.register(this,this::toString);
 ### Step 2 - Monitor your module
 Add in a _parts4j.properties_ file to the root of your class-path, and add this to it:
 ```properties
+parts4j.healthy=ok,null,200,true
 parts4j.manager.stdout=parts4j.managers.SystemOutReport
 parts4j.manager.stdout.frequency=60000
 parts4j.manager.stdout.criteria=component
