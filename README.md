@@ -1,6 +1,7 @@
 # parts4j - Lightweight non-intrusive module management framework
 The parts4j is a lightweight non-intrusive module management framework inspired by log4j, that manages 
 life-cycle, health and statistics of your modules by only adding a few lines of code to your existing modules.
+The parts4j framework standardizes access to common module capabilities and aspects to simplify management of modules.
 
 ## Quick start
 ### Step 1 - Register your module
