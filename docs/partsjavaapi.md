@@ -2,6 +2,7 @@
 This document describes the key concepts when working with parts4j Part and PartType instances.
 The parts4j framework standardizes access to common module capabilities and aspects to simplify management of modules.
 Key to successfully using the framework is to understand the common variables and actions that can be registered with the framework. These actions and variables represent common capabilities, and parts4j facilities consolidated access and general management features on top of these actions and variables.
+
 ## Part variables
 Parts can register a standard set of fields or variables with the parts4j framework. Variables can either be referenced, by registering the getter method with the framework OR it can be provided programmtically to by calling setter method on the part instance. Either way the current value of the variable can be accessed on the part instance by calling the get[Variable] on the part object.
 
@@ -99,6 +100,7 @@ For querying, to find parts by the 'licence' field use _queryLicence(String)_ qu
 
 
 ## Part actions
+
 Parts can register a standard set of actions with the parts4j framework. By registering the methods, the part becomes consistently managed with other parts in the environment. These actions have do[action-name] methods on the Part object.
 
 ### Action 'create'
