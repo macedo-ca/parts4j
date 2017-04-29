@@ -1,4 +1,3 @@
-
 # Part4J Java API
 This document describes the key concepts when working with parts4j Part and PartType instances.
 The parts4j framework standardizes access to common module capabilities and aspects to simplify management of modules.
@@ -18,7 +17,8 @@ Parts can register a standard set of fields or variables with the parts4j framew
 - [licence](#licence) - the software licence for the part
 
 
-### 'id' variable<a name='id'></a>
+<a name='id'></a>
+### 'id' variable
 The variable 'id' is the unique ID of the part and has the following methods:
 - registerId(Supplier) - to specify the method that retrieves the id
 - setId(String) - to set id
@@ -32,7 +32,8 @@ For example: Assuming as class that has a 'getLocalId' method:
 PartRegistry.registerPart(this,this::getLocalId)
 ```
  
-### 'health' variable<a name='health'></a>
+<a name='health'></a>
+### 'health' variable
 The variable 'health' is the current health of the part (e.g. 'ok', 'crashed') and has the following methods:
 - registerHealth(Supplier) - to specify the method that retrieves the health
 - setHealth(String) - to set health
@@ -49,14 +50,16 @@ To use the 'unhealthy' searches or health-aggregation features of Parts4J, the p
 
 The list of healthy status codes can be customized through the 'parts4j.healthy' property in parts4j.properties. If a health method or value is not set, the framework will see if there are errors on the part, and report it as unhealthy if there are errors. Unhealthy parts are found with queryUnhealthy() query method.
 
-### 'stats' variable<a name='stats'></a>
+<a name='stats'></a>
+### 'stats' variable
 The variable 'stats' is statistics for the part (e.g. '500 ms/call', '52344 cache entries') and has the following methods:
 - registerStats(Supplier) - to specify the method that retrieves the stats
 - setStats(String) - to set stats
 - getStats - to retrieve current stats
 
 
-### 'errors' variable<a name='errors'></a>
+<a name='errors'></a>
+### 'errors' variable
 The variable 'errors' is significant errors (i.e. errors that has caused or will cause unwanted behaviour) for the part and has the following methods:
 - registerErrors(Supplier) - to specify the method that retrieves the errors
 - setErrors(String) - to set errors
@@ -74,7 +77,8 @@ To use the 'unhealthy' searches or health-aggregation features of Parts4J, the p
 
 The list of healthy status codes can be customized through the 'parts4j.healthy' property in parts4j.properties. If a health method or value is not set, the framework will see if there are errors on the part, and report it as unhealthy if there are errors. Unhealthy parts are found with queryUnhealthy() query method.
 
-### 'tenant' variable<a name='tenant'></a>
+<a name='tenant'></a>
+### 'tenant' variable
 The variable 'tenant' is the tenant identifier (e.g. a client ID or account ID) or details for the part and has the following methods:
 - registerTenant(Supplier) - to specify the method that retrieves the tenant
 - setTenant(String) - to set tenant
@@ -83,7 +87,8 @@ The variable 'tenant' is the tenant identifier (e.g. a client ID or account ID) 
 For querying, to find parts by the 'tenant' field use _queryTenant(String)_ query method.
 
 
-### 'version' variable<a name='version'></a>
+<a name='version'></a>
+### 'version' variable
 The variable 'version' is the version of part (such as a module release version) and has the following methods:
 - registerVersion(Supplier) - to specify the method that retrieves the version
 - setVersion(String) - to set version
@@ -92,7 +97,8 @@ The variable 'version' is the version of part (such as a module release version)
 For querying, to find parts by the 'version' field use _queryVersion(String)_ query method.
 
 
-### 'status' variable<a name='status'></a>
+<a name='status'></a>
+### 'status' variable
 The variable 'status' is the current status of the part (e.g. life-cycle status such as 'started' or 'stopped') and has the following methods:
 - registerStatus(Supplier) - to specify the method that retrieves the status
 - setStatus(String) - to set status
@@ -101,7 +107,8 @@ The variable 'status' is the current status of the part (e.g. life-cycle status 
 For querying, to find parts by the 'status' field use _queryStatus(String)_ query method.
 
 
-### 'licence' variable<a name='licence'></a>
+<a name='licence'></a>
+### 'licence' variable
 The variable 'licence' is the software licence for the part and has the following methods:
 - registerLicence(Supplier) - to specify the method that retrieves the licence
 - setLicence(String) - to set licence
